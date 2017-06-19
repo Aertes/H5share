@@ -11,45 +11,54 @@
 </head>
 
 <body>
-    <div class="content">
-        <div class="qr_share">
-            <ul>
-                <li>
-                    <a class="sina iconfont icon-xinlang-copy " href="javascript:;"></a>
-                    <a class="weixin iconfont icon-pengyouquan1" href="javascript:;"></a>
-                </li>
-                <li>
-                    <a class="num" href="javascript:;">3k</a>
-                </li>
-            </ul>
+    <div class="qr_share">
+        <ul>
+            <li>
+                <a class="sina iconfont icon-xinlang-copy " href="javascript:;"></a>
+                <a class="weixin iconfont icon-pengyouquan1" href="javascript:;"></a>
+            </li>
+            <li>
+                <a class="num" href="javascript:;">3k</a>
+            </li>
+        </ul>
+    </div>
+    
+    <div class="qr_code">
+        <div class="qr_close">x</div>
+        <div class="qr_img">
+            <img src="./qr.jpg">
         </div>
-        <div class="qr_code">
-            <div class="qr_close">x</div>
-            <div class="qr_img">
-                <img src="./qr.jpg">
-            </div>
-            <div class="qr_content">
-                <p>微信扫描二维码</p>
-                <p>分享微信朋友圈</p>
-            </div>
+        <div class="qr_content">
+            <p>微信扫描二维码</p>
+            <p>分享微信朋友圈</p>
         </div>
     </div>
+
     <div class="modal"></div>
+
     <script src="./jquery-1.10.2.min.js"></script>
     <script>
         $(function () {
-                
-            $('.qr_share .sina').on('click', function () {
+            var windowHeight = $(window).height();
+            var boxHeight = $('.qr_code').height();
+            var height = (windowHeight - boxHeight) / 2 + 'px';
+
+            $('.qr_share .sina')
+            .on('click', function () {
                 window.location.href = 'http://service.weibo.com';
+            });
+            
+            $('.qr_share .weixin')
+            .on('click', function () {
+                $('.qr_code').fadeIn().css({ "margin-top": height }).next().fadeIn();
+            });
+
+            $(document)
+            .on('click', '.qr_close', function () {
+                $('.qr_code').fadeOut().next().fadeOut();
             })
-            $('.qr_share .weixin').on('click', function () {
-                var height = $(document).height()/2 - ($('.qr_share').height()/2) + 'px';
-                $('.qr_code').fadeIn().css({"margin-top": height}).parent().next().fadeIn();
-            })
-            $(document).on('click', '.qr_close', function () {
-                $('.qr_code').fadeOut().parent().next().fadeOut();
-            }).on('click', '.modal', function(){
-                $('.qr_code').fadeOut().parent().next().fadeOut();
+            .on('click', '.modal', function () {
+                $('.qr_code').fadeOut().next().fadeOut();
             })
         })
     </script>

@@ -20,26 +20,26 @@ li {
   list-style: none;
 }
 
-.content {
-  margin: 50px auto;
+.qr_share {
+  margin-top: 50px;
 }
 
-.content .qr_share ul {
+.qr_share ul {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
-.content .qr_share ul li {
+.qr_share ul li {
   padding: 0 5px;
 }
 
-.content .qr_share ul a {
+.qr_share ul a {
   font-size: 20px;
 }
 
-.content .qr_share ul .num {
+.qr_share ul .num {
   font-size: 12px;
   padding: 1px 8px;
   border-radius: 4px;
@@ -48,7 +48,7 @@ li {
   position: relative;
 }
 
-.content .qr_share ul .num:before {
+.qr_share ul .num:before {
   content: '';
   position: absolute;
   width: 0;
@@ -62,7 +62,7 @@ li {
   margin-top: -6px;
 }
 
-.content .qr_share ul .num:after {
+.qr_share ul .num:after {
   content: '';
   position: absolute;
   width: 0;
@@ -77,45 +77,47 @@ li {
   z-index: -1;
 }
 
-.content .qr_share .icon-xinlang-copy:before {
+.qr_share .icon-xinlang-copy:before {
   color: #e84546;
 }
 
-.content .qr_share .icon-pengyouquan1:before {
+.qr_share .icon-pengyouquan1:before {
   color: #99cf55;
 }
 
-.content .qr_code {
+.qr_code {
   margin: 0 auto;
   background-color: white;
   text-align: center;
   width: 220px;
   z-index: 111;
-  position: relative;
+  position: absolute;
   top: 0;
+  left: 50%;
+  margin-left: -110px;
   display: none;
 }
 
-.content .qr_code .qr_close {
+.qr_code .qr_close {
   text-align: right;
   padding: 0 10px;
   font-size: 16px;
 }
 
-.content .qr_code .qr_img {
+.qr_code .qr_img {
   width: 150px;
   height: 150px;
   margin: 5px auto;
 }
 
-.content .qr_code .qr_img img {
+.qr_code .qr_img img {
   width: 100%;
   display: table-cell;
   vertical-align: middle;
   text-align: center;
 }
 
-.content .qr_code .qr_content {
+.qr_code .qr_content {
   padding: 5px 0;
 }
 
