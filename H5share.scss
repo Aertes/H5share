@@ -1,0 +1,120 @@
+@charset 'utf-8';
+html,
+body,
+a,
+div,
+ul,
+li,
+p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+.content {
+    margin: 50px auto;
+    .qr_share {
+        ul {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            li {
+                padding: 0 5px;
+            }
+            a {
+                font-size: 20px;
+            }
+            .num {
+                font-size: 12px;
+                padding: 1px 8px;
+                border-radius: 4px;
+                background-color: #fff;
+                border: 1px solid #d4d4d4;
+                position: relative;
+                &:before {
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    border-color: transparent;
+                    border-style: solid;
+                    border-width: 6px 6px 6px 0;
+                    border-right-color: #fafafa;
+                    top: 50%;
+                    left: -5px;
+                    margin-top: -6px;
+                }
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    border-color: transparent;
+                    border-style: solid;
+                    border-width: 7px 7px 7px 0;
+                    top: 50%;
+                    left: -6px;
+                    margin-top: -7px;
+                    border-right-color: #d4d4d4;
+                    z-index: -1;
+                }
+            }
+        }
+        .icon-xinlang-copy:before {
+            color: #e84546;
+        }
+        .icon-pengyouquan1:before {
+            color: #99cf55;
+        }
+    }
+    .qr_code {
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 1);
+        text-align: center;
+        width: 220px;
+        z-index: 111;
+        position: relative;
+        top: 0;
+        display: none;
+        .qr_close {
+            text-align: right;
+            padding: 0 10px;
+            font-size: 16px;
+        }
+        .qr_img {
+            width: 150px;
+            height: 150px;
+            margin: 5px auto;
+            img {
+                width: 100%;
+                display: table-cell;
+                vertical-align: middle;
+                text-align: center;
+            }
+        }
+        .qr_content {
+            padding: 5px 0;
+        }
+    }
+}
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .6);
+    z-index: 11;
+    display: none;
+}
