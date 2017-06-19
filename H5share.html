@@ -22,7 +22,7 @@
             </li>
         </ul>
     </div>
-    
+
     <div class="qr_code">
         <div class="qr_close">x</div>
         <div class="qr_img">
@@ -47,19 +47,17 @@
             .on('click', function () {
                 window.location.href = 'http://service.weibo.com';
             });
-            
-            $('.qr_share .weixin')
-            .on('click', function () {
+
+            $('.qr_share .weixin').on('click', function () {
                 $('.qr_code').fadeIn().css({ "margin-top": height }).next().fadeIn();
             });
-
-            $(document)
-            .on('click', '.qr_close', function () {
+            
+            $('.qr_close').on('click', function () {
                 $('.qr_code').fadeOut().next().fadeOut();
-            })
-            .on('click', '.modal', function () {
+            });
+            $( '.modal').on('click', function () {
                 $('.qr_code').fadeOut().next().fadeOut();
-            })
+            });
         })
     </script>
 </body>
