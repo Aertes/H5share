@@ -1,0 +1,23 @@
+{	
+	"status" : true,
+	"special":[
+		{
+			"name":"黄色",
+			"imgPath":"../assets/images/color/2.gif",
+			"sort":1,
+			"id":1
+		},
+		{
+			"name":"酒红色",
+			"imgPath":"../assets/images/color/3.gif",
+			"sort":2,
+			"id":2
+		},
+		{
+			"name":"混色",
+			"imgPath":"../assets/images/color/10.gif",
+			"sort":3,
+			"id":3
+		}
+	]
+}
